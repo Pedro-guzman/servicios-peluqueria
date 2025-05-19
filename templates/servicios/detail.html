@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Detalles{{ servicio.name }}{% endblock %}
+
+{% block 'content' %}
+
+<span class="aux-btns"><a href="{% url 'servicios' %}">Regresar</a></spana>
+    <ul class="list">
+        <li><b>Cliente: </b>{{ servicio.customer }}</li>
+        <li><b>Servicio: </b>{{ servicio.service }}</li>
+        <li><b>Fecha:  </b>{{ servicio.date }}</li>
+        <li><b>Peluquero: </b>{{ servicio.barber }}</li>
+        <li><b>Forma de pago: </b>{{ servicio.payment_method }}</li>
+        <li><b>Precio: </b>{{ servicio.price }}</li>
+
+    </ul>
+{% endblock %}

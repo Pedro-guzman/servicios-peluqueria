@@ -1,0 +1,9 @@
+<form class="search" action="{% url 'servicios' %}" method="GET">
+    <span class="aux-btns"><a href="{% url 'servicios' %}">Ver<a/><a href="{% url 'servicio_create' %}">Añadir</a></span>
+    <input type="text" name="search" class="search-bar" placeholder="Buscar">
+    <span class="search-icon">
+        <i class="fa-duotone fa-solid fa-magnifying-glass"></i>
+    </span>
+   
+    <input type="submit" value="Buscar" class="search-btn">
+</form>

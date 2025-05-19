@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Servicios{% endblock %}
+
+{% block 'content' %}
+
+{% include "servicios/partials/search.html" %}
+{% include "servicios/partials/by_initial.html" %}
+
+   
+    <ul class="list">
+        {% for servicio in servicios %}
+        <li>
+            {{ servicio }}
+            <span>
+                <a href="{% url 'servicio_view' id=servicio.id %}" class="btn btn-detail">
+                    <i class="fa-duotone fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="{% url 'servicio_edit' id=servicio.id %}" class="btn btn-edit">
+                    <i class="fa-duotone fa-solid fa-pen-to-square"></i>
+                </a>
+                <a href="{% url 'servicio_delete' id=servicio.id %}" onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');" class="btn btn-delete">
+                    <i class="fa-solid fa-trash-can" class="icon-delete"></i>
+                </a>
+            </span>
+        </li>
+
+    
+        {% endfor %}
+       
+   </ul>
+
+
+    
+{% endblock %}

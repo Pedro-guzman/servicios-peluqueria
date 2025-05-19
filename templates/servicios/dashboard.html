@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %}Dashboard{% endblock %}
+
+{% block 'content' %}
+<div class="filtro">
+<form method="GET">
+    <label for="fecha_inicio">Desde:</label>
+    <input type="date" name="fecha_inicio" id="fecha_inicio" value="{{ request.GET.fecha_inicio }}">
+    
+    <label for="fecha_fin">Hasta:</label>
+    <input type="date" name="fecha_fin" id="fecha_fin" value="{{ request.GET.fecha_fin }}">
+    
+    <button class="btn-filtrar" type="submit">Filtrar</button>
+  </form>
+</div>
+
+<h2>Dashboard de Servicios</h2>
+
+<!-- gráfica -->
+ {% for grafica in graficas %}
+    <div class="grafica">
+        {{ grafica|safe }}
+    </div>
+{% endfor %}
+
+{% endblock %}
