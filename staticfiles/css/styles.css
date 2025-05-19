@@ -241,4 +241,12 @@ main {
     .search-btn {
         display: none;
     }
+
+}
+
+@media screen and (max-width: 400px) {
+    texto-principal{
+        font-size: 5px;
+    }
+
 }
