@@ -17,6 +17,7 @@ comm==0.2.2
 debugpy==1.8.14
 decorator==5.2.1
 defusedxml==0.7.1
+dj-database-url==2.3.0
 Django==5.0.7
 et_xmlfile==2.0.0
 executing==2.2.0
@@ -108,4 +109,4 @@ wcwidth==0.2.13
 webcolors==24.11.1
 webencodings==0.5.1
 websocket-client==1.8.0
-dj-database-url
+whitenoise==6.9.0
