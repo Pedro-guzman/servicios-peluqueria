@@ -12,11 +12,13 @@
  
 </head>
 <body>
- {% include "layout/partials/menu.html" %}
-  <main>
-    {% block 'content' %}
-    {% endblock %}
-  </main>
-
+  <div class="contenedor">
+      {% include "layout/partials/menu.html" %}
+      <main>
+        {% block 'content' %}{% endblock %}
+      </main>
+    {% include "layout/partials/footer.html" %}
+  </div>
+ 
   <script src="https://kit.fontawesome.com/122562b252.js" crossorigin="anonymous"></script>
 </body>

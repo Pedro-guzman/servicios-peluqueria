@@ -1,7 +1,7 @@
 :root {
     --color-primary: #d0d0e6;
     --btn: #7b5bf2;
-    --color-secondary: #00B4D8;
+    --color-secondary: #09184d;
     --background: #CAF0F8;
     --color-text: #2f2e2e;
     --font-main: Roboto-Bold;
@@ -30,8 +30,9 @@
     font-family: var(--font-text);
 }
 
-body {
+html, body {
     background-color: white;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,7 +65,7 @@ nav ul li a {
     color: var(--color-text);
     text-transform: uppercase;
     font-family: var(--font-main);
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -76,6 +77,7 @@ nav ul li a:hover {
 }
 
 main {
+    flex: 1;
     display: flex;
     width: 100vw;
     margin-top:  100px;
@@ -84,6 +86,12 @@ main {
     flex-direction: column;
 }
 
+.contenedor  {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+
+}
 .list {
     display: flex;
     flex-direction: column;
@@ -211,19 +219,56 @@ main {
 }
 
 /* Estilos del filtro de fechas */
-.filtro {
+.filtro form {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    height: 50px;
-    background-color: rgb(247, 240, 231);
+    height: 200px;
+    background-color: rgb(252, 250, 247);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    width: 500px;
+    width: 200px;
     align-items: center;
     justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }
+
+.text-grafica {
+    text-align: center;
+    width: 100%;
+}
+
+.pie  footer { 
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-secondary);
+}
+
+.pie footer ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+} 
+.pie footer ul a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+} 
+
+.pie footer ul a:hover {
+    color: var(--btn);
+    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    cursor: pointer;
+} 
 
 @media screen and (max-width: 800px) {
     .btn {
@@ -243,17 +288,46 @@ main {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
+    nav {
+        width: 100%;
+    }
+    .filtro form {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .filtro form button {
+        align-items: flex-start;
+    }
+
+  .filtro label,
+  .filtro input,
+  .filtro button {
+    width: 80%;
+  }
+
+  .btn-filtrar {
+    width: auto; /* para que el botón no sea muy ancho, opcional */
+  }
+}
+
+@media screen and (max-width: 470px) {
     nav {
         display: flex;
-        font-size: 10px;
+        font-size: 15px;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         position: fixed;
         top: 0;
-    
+        width: 100%;
+        padding: 10px;
     }
+
     .list ul li a {
         flex-direction: column;
     }
@@ -261,4 +335,24 @@ main {
         width: 40px;
         border-radius: 50%;
     }
+
+    .filtro  form {
+        margin-top: 50px;
+        margin-left: 125px;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .text-grafica {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pie footer ul {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+    
 }
