@@ -1,3 +1,13 @@
+:root {
+    --color-primary: #d0d0e6;
+    --btn: #7b5bf2;
+    --color-secondary: #09184d;
+    --background: #CAF0F8;
+    --color-text: #2f2e2e;
+    --font-main: Roboto-Bold;
+    --font-text: Roboto-Medium;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -9,7 +19,7 @@
     padding-right: 50px;
     width: 350px;
     height: 350px;
-    background-color: rgb(235, 232, 231);
+    background-color: rgb(140, 197, 221);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
 }
@@ -17,7 +27,7 @@
 input {
     outline: none;
     box-shadow: none;
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--btn);
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
@@ -25,9 +35,9 @@ input {
 
 .btn-send {
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--btn);
     color: white;
-    border: 2px solid var(--color-text);
+    border: 2px solid var(--btn);
     padding: 5px;
     text-transform: uppercase;
     cursor: pointer;
@@ -35,9 +45,9 @@ input {
 }
 
 .btn-send-create {
-    background-color: var(--color-primary);
+    background-color: var(--btn);
     color: white;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--btn);
     padding: 5px;
     text-transform: uppercase;
     cursor: pointer;
@@ -61,7 +71,7 @@ input {
 
 .btn-send:hover, .btn-send-create:hover, .btn-wrapper:hover {
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--btn);
 }
 
 .aux-btns-forms {

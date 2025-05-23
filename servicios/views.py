@@ -21,6 +21,7 @@ def index(request, letter=None):
     }
     return render(request, 'servicios/index.html', context )
 
+# VIsta para visualizar un servicio
 def view(request, id):
     servicio = Servicios.objects.get(id=id)
     context = {
@@ -28,6 +29,7 @@ def view(request, id):
     }
     return render(request, 'servicios/detail.html', context)
 
+# Vista par aeditar servicio
 def edit(request, id):
     servicios = Servicios.objects.get(id=id)
     

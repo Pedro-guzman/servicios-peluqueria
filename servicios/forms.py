@@ -11,6 +11,7 @@ class ContactForm(ModelForm):
         ('Ceja', 'Ceja'),
         ('Contornos', 'Contornos'),
         ('Barba + Ceja', 'Barba + Ceja'),
+        ('Corte + Ceja', 'Corte + Ceja'),
         ('Barba + Ceja + Corte', 'Barba + Ceja + Corte'),
     ]
     
