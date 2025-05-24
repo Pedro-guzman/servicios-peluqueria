@@ -50,6 +50,8 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1000;
+    opacity: 0.9;
+
 }
 
 nav ul {
@@ -370,7 +372,7 @@ select {
         width: 100px;
         height: 250px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 700px;
     }
 
     .text-grafica {
